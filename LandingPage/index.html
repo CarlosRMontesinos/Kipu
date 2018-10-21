@@ -3,23 +3,33 @@
 
 <head>
 
-    <!-- Global site tag (gtag.js) - Google Analytics --
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-126821281-1', 'auto');
-      ga('require', 'GTM-WJFLD9B');
-      ga('send', 'pageview');
-    </script>
+<!-- I want analytics + optimizer and tag manager separete  -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics + Optimize -->
     <style>.async-hide { opacity: 0 !important} </style>
     <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
     h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
     (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
     })(window,document.documentElement,'async-hide','dataLayer',4000,
-    {'GTM-WJFLD9B':true});</script>
--->
+    {'GTM-TRLM8F2':true});</script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127758290-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127758290-1',{'optimize_id':'GTM-TRLM8F2'});
+    </script>
+    <!-- End Global site tag (gtag.js) - Google Analytics + Optimize -->
+
+    <!-- Google Tag Manager + Google Analytics + Optimize --
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WQ6WM98');</script>
+    <!-- End Google Tag Manager + Google Analytics + Optimize -->
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,6 +53,13 @@
     <!-- <link rel="stylesheet" href="./bootstrap/css/agency.css"> -->
   </head>
   <body id="page-top" class="index">
+
+    <!-- Google Tag Manager (noscript) --
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQ6WM98"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -92,10 +109,22 @@
                         <input type="text" name="b_b0ed2b598d8faa14ffbd88839_315796c5a8" tabindex="-1" value="">
                       </div>
                       <!-- ---------------- -->
+
+                      <button type="submit" class="btn btn-xl" name="subscribe" id="mc-embedded-subscribe" onClick="gtag('event','Sign-Up');">Sign Up</button>
+
                       <!--
-                      <button type="submit" class="btn btn-xl" name="subscribe" id="mc-embedded-subscribe" onClick="ga('send', 'event', { eventCategory: 'button', eventAction: 'clicked', eventLabel: 'email signup'});">Sign Up</button>
+                      <button type="submit" class="btn btn-xl" name="subscribe" id="mc-embedded-subscribe" onClick="gtag('event','SignUp', { 'event_category': 'Buttons', 'event_label': 'LandingPage', 'value': 'true'});">Sign Up</button>
                     -->
+
+                      <!--
+                      <button type="submit" class="btn btn-xl" name="subscribe" id="mc-embedded-subscribe" onClick="gtag('send', 'event', { eventCategory: 'button', eventAction: 'clicked', eventLabel: 'email signup'});">Sign Up</button>
+                    -->
+                    <!--
                       <button type="submit" class="btn btn-xl" name="subscribe" id="mc-embedded-subscribe" onClick="ga('send', 'event', button, clicked, 'signup');">Sign Up</button>
+                      -->
+                      <!--
+                      <button type="submit" class="btn btn-xl" name="subscribe" id="mc-embedded-subscribe">Sign Up</button>
+                      -->
                     </div>
                   </form>
                 </section>
